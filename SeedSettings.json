@@ -1,0 +1,23 @@
+{
+  "api": {
+    "include": {
+      "*": "*"
+    }
+  },
+  "extend": {
+    "models": [],
+    "routes": [
+      "task"
+    ],
+    "schema_types": [],
+    "serializers": []
+  },
+  "graphql": {
+    "include": {
+      "*": "*"
+    }
+  },
+  "platform": "django",
+  "project_description": "This repository holds the source code of front",
+  "project_name": "front"
+}

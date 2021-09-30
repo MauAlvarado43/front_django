@@ -1,0 +1,75 @@
+{
+  "models": [
+    {
+      "attrs": [
+        {
+          "name": "photo",
+          "type": "image"
+        }
+      ],
+      "description": "Represents a registered user",
+      "name": "user"
+    },
+    {
+      "attrs": [
+        {
+          "length": "255",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "members",
+          "type": "user"
+        }
+      ],
+      "name": "project"
+    },
+    {
+      "attrs": [
+        {
+          "length": "255",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "default": "now",
+          "name": "deadline",
+          "type": "date"
+        },
+        {
+          "name": "status",
+          "options": [
+            "TODO",
+            "IN_PROCESS",
+            "COMPLETED"
+          ],
+          "type": "enum"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "assigned",
+          "type": "user"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "project",
+          "type": "project"
+        }
+      ],
+      "name": "task"
+    }
+  ]
+}
